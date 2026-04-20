@@ -1,3 +1,79 @@
-body{
-    
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* IMAGEN */
+#img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CAPA OSCURA */
+.contenedor::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.4);
+
+    pointer-events: none;
+}
+
+/* CONTENIDO ENCIMA */
+.contenido {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+    z-index: 2;
+}
+
+/* MENU */
+.menu {
+    position: absolute;
+    top: 20px;
+}
+
+.menu a {
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* TEXTO */
+p {
+    max-width: 600px;
+}
+
+/* BOTON */
+button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    margin-top: 10px;
 }

@@ -1,12 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trabajo Final</title>
+    <link rel="stylesheet" href="trabajo-final1.css">
 </head>
 <body>
-    <h1>sistema de boom</h1>
-    <h2></h2>
+
+    <div class="contenedor">
+
+        <!-- IMAGEN -->
+        <img id="img" src="imagen/boom1.JPEG" alt="imagen">
+
+        <!-- CONTENIDO -->
+        <div class="contenido">
+
+            <!-- MENU -->
+            <div class="menu">
+                <a href="#">Inicio</a>
+                <a href="#">Sobre mi</a>
+                <a href="#">Contacto</a>
+            </div>
+
+            <!-- TITULO -->
+            <h1>TRABAJO FINAL</h1>
+
+            <!-- TEXTO -->
+            <p>
+                Soy un estudiante de ultimo semestre de la carrera de sistemas informaticos
+                del CEA Jose Mariscal B. Tengo muchas habilidades y tambien termine la
+                carrera de electronica.
+            </p>
+
+            <!-- BOTON -->
+            <button onclick="ir()">Descubre mas</button>
+
+        </div>
+    </div>
+
+    <script>
+        var lista = [
+            "imagen/boom1.JPEG",
+            "imagen/boom2.JPEG",
+            "imagen/boom3.JPEG",
+            "imagen/boom4.JPEG"
+        ];
+
+        var i = 0;
+
+        function cambiar() {
+            i++;
+
+            if (i >= lista.length) {
+                i = 0;
+            }
+
+            document.getElementById("img").src = lista[i];
+        }
+
+        setInterval(cambiar, 3000);
+
+        function ir() {
+            window.location = "trabajo-final2.html";
+        }
+    </script>
+
 </body>
 </html>
